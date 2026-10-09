@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Write a New Blog Post — Personal Blog</title>
+  <meta name="description" content="Create and publish your personal blog post." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-icon">✍</span>
+        <span>MinimalLog</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+        <li><a href="add-blog.html" class="nav-link active">+ Add Blog</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme" title="Switch theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container article-container">
+      
+      <div class="form-card">
+        <div class="form-header">
+          <a href="blogs.html" class="back-link">← Cancel and return to blogs</a>
+          <h1 id="page-heading">Write a New Blog Post</h1>
+          <p class="section-subtitle" id="page-subheading">Share your knowledge, tutorials, or daily reflections with the world.</p>
+        </div>
+
+        <form id="blog-form">
+          
+          <!-- Title -->
+          <div class="form-group">
+            <label for="blog-title" class="form-label">
+              Blog Title <span class="required">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="blog-title" 
+              class="form-input" 
+              placeholder="e.g., Why Building Small Side Projects Matters" 
+              required
+            />
+          </div>
+
+          <!-- Short Description -->
+          <div class="form-group">
+            <label for="blog-desc" class="form-label">
+              Short Summary / Description
+            </label>
+            <input 
+              type="text" 
+              id="blog-desc" 
+              class="form-input" 
+              placeholder="A brief 1-2 sentence teaser for card previews (optional, auto-generated if empty)"
+            />
+            <div class="form-hint">Shown on homepage and blog listing cards.</div>
+          </div>
+
+          <!-- Category -->
+          <div class="form-group">
+            <label for="blog-category" class="form-label">
+              Category <span class="required">*</span>
+            </label>
+            <select id="blog-category" class="form-select" required>
+              <option value="Technology">Technology</option>
+              <option value="Programming">Programming</option>
+              <option value="AI">AI</option>
+              <option value="Personal">Personal</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Cover Image URL -->
+          <div class="form-group">
+            <label for="blog-image" class="form-label">
+              Cover Image URL
+            </label>
+            <input 
+              type="url" 
+              id="blog-image" 
+              class="form-input" 
+              placeholder="https://images.unsplash.com/..."
+            />
+            
+            <div style="margin-top: 0.5rem;">
+              <span class="form-hint">Quick Image Presets (click to use):</span>
+              <div class="image-presets" id="preset-chips-container">
+                <!-- Populated by add-blog.js -->
+              </div>
+            </div>
+
+            <div class="image-preview-box" id="image-preview">
+              <span>No image selected (Default placeholder will be used)</span>
+            </div>
+          </div>
+
+          <!-- Blog Content -->
+          <div class="form-group">
+            <label for="blog-content" class="form-label">
+              Blog Content (Markdown supported) <span class="required">*</span>
+            </label>
+            <textarea 
+              id="blog-content" 
+              class="form-textarea" 
+              placeholder="Write your story here...&#10;&#10;Formatting Tips:&#10;## Subheading&#10;> Blockquote or key takeaway&#10;- Bullet point item&#10;`code snippets` and **bold text**" 
+              required
+            ></textarea>
+            <div class="form-hint">Supports headings (##), blockquotes (>), bullet lists (-), bold (**text**), and inline code (`code`).</div>
+          </div>
+
+          <!-- Submit Buttons -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              Publish Blog 🚀
+            </button>
+            <a href="blogs.html" class="btn btn-secondary">
+              Cancel
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="add-blog.html">Add Blog</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 MinimalLog. Built with clean HTML, CSS & JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/add-blog.js"></script>
+</body>
+</html>

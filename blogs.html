@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Blogs — Personal Blog</title>
+  <meta name="description" content="Explore all blog posts across technology, programming, artificial intelligence, personal thoughts, and more." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-icon">✍</span>
+        <span>MinimalLog</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="blogs.html" class="nav-link active">Blogs</a></li>
+        <li><a href="add-blog.html" class="nav-link">+ Add Blog</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme" title="Switch theme">
+          🌙
+        </button>
+        <a href="add-blog.html" class="btn btn-primary btn-sm">Write Post</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      
+      <!-- Page Header -->
+      <div style="margin-bottom: 2rem;">
+        <h1 class="hero-title" style="margin-bottom: 0.5rem; text-align: left; font-size: 2.25rem;">Explore All Posts</h1>
+        <p class="hero-subtitle" style="text-align: left; margin: 0; font-size: 1.05rem;">
+          Discover articles, guides, and tutorials sorted by topic.
+        </p>
+      </div>
+
+      <!-- Filter & Search Controls -->
+      <section class="filter-section">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="search-input" 
+            class="search-input" 
+            placeholder="Search blogs by title, keywords, or content..." 
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="category-filters">
+          <button class="filter-btn active" data-category="All">All Topics</button>
+          <button class="filter-btn" data-category="Technology">Technology</button>
+          <button class="filter-btn" data-category="Programming">Programming</button>
+          <button class="filter-btn" data-category="AI">AI</button>
+          <button class="filter-btn" data-category="Personal">Personal</button>
+          <button class="filter-btn" data-category="Other">Other</button>
+        </div>
+      </section>
+
+      <!-- Results Stats -->
+      <div style="margin-bottom: 1.25rem; font-size: 0.9rem; color: var(--text-muted);" id="blogs-count">
+        <!-- Populated by blogs.js -->
+      </div>
+
+      <!-- Blogs Grid -->
+      <div class="blog-grid" id="blogs-grid">
+        <!-- Populated dynamically by blogs.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="add-blog.html">Add Blog</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 MinimalLog. Built with clean HTML, CSS & JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/blogs.js"></script>
+</body>
+</html>

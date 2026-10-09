@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thoughts, Ideas & Stories — Personal Blog</title>
+  <meta name="description" content="A clean, modern personal blog sharing insights on technology, programming, artificial intelligence, and daily building." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-icon">✍</span>
+        <span>MinimalLog</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+        <li><a href="add-blog.html" class="nav-link">+ Add Blog</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme" title="Switch theme">
+          🌙
+        </button>
+        <a href="add-blog.html" class="btn btn-primary btn-sm">Write Post</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      
+      <!-- Hero Section -->
+      <section class="hero">
+        <span class="hero-badge">Personal Journal & Notes</span>
+        <h1 class="hero-title">Thoughts, Ideas & Stories</h1>
+        <p class="hero-subtitle">
+          Welcome to my personal blog where I share things I learn, build and experience across technology, coding, and life.
+        </p>
+        <div class="hero-cta">
+          <a href="blogs.html" class="btn btn-primary">Explore Blogs →</a>
+          <a href="add-blog.html" class="btn btn-secondary">Create a Post</a>
+        </div>
+      </section>
+
+      <!-- Featured Blog Section -->
+      <section>
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Featured Story</h2>
+            <p class="section-subtitle">Editor's highlight from recent writing</p>
+          </div>
+        </div>
+
+        <div id="featured-blog-container">
+          <!-- Populated dynamically by main.js -->
+        </div>
+      </section>
+
+      <!-- Recent Blogs Section -->
+      <section>
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Recent Posts</h2>
+            <p class="section-subtitle">Freshly published thoughts and insights</p>
+          </div>
+          <a href="blogs.html" class="btn btn-outline btn-sm">View All Blogs →</a>
+        </div>
+
+        <div class="blog-grid" id="recent-blogs-grid">
+          <!-- Populated dynamically by main.js -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="add-blog.html">Add Blog</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 MinimalLog. Built with clean HTML, CSS & JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

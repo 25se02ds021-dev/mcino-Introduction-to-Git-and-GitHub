@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Post — Personal Blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="nav-brand">
+        <span class="nav-brand-icon">✍</span>
+        <span>MinimalLog</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+        <li><a href="add-blog.html" class="nav-link">+ Add Blog</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme" title="Switch theme">
+          🌙
+        </button>
+        <a href="add-blog.html" class="btn btn-primary btn-sm">Write Post</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Content -->
+  <main>
+    <div class="container article-container">
+      <div id="blog-detail-container">
+        <!-- Populated dynamically by blog.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="add-blog.html">Add Blog</a></li>
+      </ul>
+      <p class="footer-copy">© 2026 MinimalLog. Built with clean HTML, CSS & JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>
